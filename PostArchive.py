@@ -9,18 +9,24 @@
 # Copy past this code while changing info to fit your post
 # Make sure the method name (ie examplePost()) is unique (there are no others with that name)
 
+# change all the right-side elements. always keep the ''s
+# postName: what the console calls the post
+# blogName: name of blog
+# state: queue/published/draft
+# tags: tags.
+# imgSource: image url
+
 ## BEGIN COPY - PHOTO POST ##
 
-# change all the right-side elements. always keep the 's
-examplePost = {'blogname' : 'exampleBlog',
-               'state' : 'queue', # this sets it to queue, does not need to be changed
-               'tags' : ['tag1','tag2','tag3'], # you can have as many as you like, always seperate with ,
-               'imgSource' : 'url'} # source of the image for a photo post
+examplePost = {'postName' : 'examplePost', 
+               'blogName' : 'exampleBlog',
+               'state' : 'queue',
+               'tags' : ['tag1','tag2','tag3'],
+               'imgSource' : 'url'} 
 
 ## ----------------------- ##
 
 ## V Put all your posts under here V ##
-
 
 #### ^ No more posts below here! ^ ####
 

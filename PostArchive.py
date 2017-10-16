@@ -37,4 +37,4 @@ examplePost = {'postName' : 'examplePost',
 # Then, put these variable names into this array. seperate with commas
 # only put the posts you want to access in the console.
 
-ALLPOSTS = [examplePost,warAd]
+ALLPOSTS = [examplePost]

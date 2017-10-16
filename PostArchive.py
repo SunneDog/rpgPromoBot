@@ -15,22 +15,26 @@
 # state: queue/published/draft
 # tags: tags.
 # imgSource: image url
+# caption: text underneath the photo in the post. If you don't want a caption, leave this blank
+#   !!MAKE SURE YOUR CAPTION IS IN HTML!!
 
 ## BEGIN COPY - PHOTO POST ##
 
 examplePost = {'postName' : 'examplePost', 
-               'blogName' : 'exampleBlog',
+               'blogName' : 'aoa-promo.tumblr.com',
                'state' : 'queue',
                'tags' : ['tag1','tag2','tag3'],
-               'imgSource' : 'url'} 
+               'imgSource' : 'url',
+               'caption' : 'blah blah'} 
 
 ## ----------------------- ##
 
 ## V Put all your posts under here V ##
+
 
 #### ^ No more posts below here! ^ ####
 
 # Then, put these variable names into this array. seperate with commas
 # only put the posts you want to access in the console.
 
-ALLPOSTS = [examplePost]
+ALLPOSTS = [examplePost,warAd]

@@ -68,6 +68,7 @@ def printPost(post) :
     print(post['blogName'])
     print(post['state'])
     print(post['tags'])
+    print(post['caption'])
 
 # run stuff
 print("rpgPromoBot by Danni Sunne")

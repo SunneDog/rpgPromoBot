@@ -46,19 +46,19 @@ def main() :
     else :
         postI = int(postI)
         printPost(ALLPOSTS[postI])
-    
-    userInput = input("Are you sure you want to queue this post? (y/n)" + "\n")
-    if(userInput == "y") :
-        noOfQ = int(input("How many copies of this post do you want to queue? Please use digits." + "\n"))
-        while(noOfQ != 0) :
-            queuePost(ALLPOSTS[postI])
-            print("Left to print: " + str(noOfQ - 1))
-            noOfQ -= 1
+        userInput = input("Are you sure you want to queue this post? (y/n)" + "\n")
+        if(userInput == "y") :
+            noOfQ = int(input("How many copies of this post do you want to queue? Please use digits." + "\n"))
+            while(noOfQ != 0) :
+                queuePost(ALLPOSTS[postI])
+                print("Left to print: " + str(noOfQ - 1))
+                noOfQ -= 1
     elif(userInput == "n") :
         # do nothing
         print("")
     else :
         print("wtf happen???")
+   
     
     main()
     

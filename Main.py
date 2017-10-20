@@ -1,6 +1,6 @@
 ## rpgPromoBot ##
 # W/B: Danni Sunne
-# 10/13/17 ~ xx/xx/17
+# October 2017
 ## ----------- ##
 # Queues promo posts based on previously written +
 # created descriptions and graphics.
@@ -34,20 +34,25 @@ def main() :
     print("")
     postI = input("What post would you like to queue?" + "\n"
                   + "Use the number to the left of the post name." + "\n"
+                  + "Type 'all' to queue every post in order." + "\n"
                   + "Enter nothing to quit." + "\n")
     if(postI == "") :
         print("Goodbye.")
         return
+    elif(postI == "all") :
+        noOfQ = input("How many times do you want to queue every post?" + "\n")
+        noOfQ = int(noOfQ)
+        queueAllInOrder(noOfQ)
     else :
         postI = int(postI)
+        printPost(ALLPOSTS[postI])
     
-    printPost(ALLPOSTS[postI])
     userInput = input("Are you sure you want to queue this post? (y/n)" + "\n")
     if(userInput == "y") :
         noOfQ = int(input("How many copies of this post do you want to queue? Please use digits." + "\n"))
         while(noOfQ != 0) :
             queuePost(ALLPOSTS[postI])
-            print("Print: " + str(noOfQ))
+            print("Left to print: " + str(noOfQ - 1))
             noOfQ -= 1
     elif(userInput == "n") :
         # do nothing
@@ -70,6 +75,14 @@ def printPost(post) :
     print(post['tags'])
     print(post['caption'])
 
+def queueAllInOrder(noOfQ) :
+    while noOfQ != 0 or noOfQ > 0 :
+        for post in ALLPOSTS :
+            queuePost(post)
+            print("Queued post: " + post['postName'])
+        noOfQ -= 1
+    
+        
 # run stuff
 print("rpgPromoBot by Danni Sunne")
 print("version " + str(version))

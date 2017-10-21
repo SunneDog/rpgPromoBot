@@ -51,13 +51,13 @@ def main() :
             noOfQ = int(input("How many copies of this post do you want to queue? Please use digits." + "\n"))
             while(noOfQ != 0) :
                 queuePost(ALLPOSTS[postI])
-                print("Left to print: " + str(noOfQ - 1))
+                print("Left to post: " + str(noOfQ - 1))
                 noOfQ -= 1
-    elif(userInput == "n") :
-        # do nothing
-        print("")
-    else :
-        print("wtf happen???")
+        elif(userInput == "n") :
+            # do nothing
+            print("")
+        else :
+            print("wtf happen???")
    
     
     main()
